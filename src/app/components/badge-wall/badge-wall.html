@@ -1,0 +1,6 @@
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-4">
+  <div *ngFor="let badge of badges" class="bg-white dark:bg-gray-800 shadow rounded p-2 text-center">
+    <img [src]="badge.url" alt="{{ badge.name }}" class="mx-auto h-10 w-10 mb-2" />
+    <p class="text-sm font-medium text-gray-700 dark:text-gray-300">{{ badge.name }}</p>
+  </div>
+</div>

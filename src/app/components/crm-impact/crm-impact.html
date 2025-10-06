@@ -1,0 +1,13 @@
+<div class="space-y-4">
+  <div *ngFor="let case of cases" class="border rounded shadow p-4 bg-white dark:bg-gray-800">
+    <button (click)="case.open = !case.open" class="w-full text-left font-semibold text-blue-600 dark:text-blue-300">
+      {{ case.title }}
+    </button>
+    <div *ngIf="case.open" class="mt-2 text-gray-700 dark:text-gray-300">
+      <p>{{ case.description }}</p>
+      <ul class="list-disc ml-5 mt-2">
+        <li *ngFor="let point of case.points">{{ point }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
